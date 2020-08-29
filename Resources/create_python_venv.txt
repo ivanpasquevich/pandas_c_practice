@@ -1,0 +1,53 @@
+LINUX
+
+pip install virtualenv
+
+#create the environment
+virtualenv env_name
+
+# activate the environment
+source env_name/bin/activate
+
+# install all the packages in a requirements.txt file
+sudo pip install -r requirements.txt OR pip install -r /path/to/requirements.txt
+
+# deactivate the virtualenvironment
+deacivate
+
+
+
+WINDOWS
+
+pip install virtualenv
+
+#create the environment
+virtualenv env_name
+
+# activate the environment (placed in the directory of the environment)
+env_name\Scripts\activate
+
+# install all the packages in a requirements.txt file
+pip install -r requirements.txt OR pip install -r /path/to/requirements.txt
+
+# deactivate the virtualenvironment
+deacivate
+
+
+
+REQUIREMENTS.txt
+
+https://medium.com/@boscacci/why-and-how-to-make-a-requirements-txt-f329c685181e
+
+###### Requirements without Version Specifiers ######`
+nose
+nose-cov
+beautifulsoup4
+
+###### Requirements with Version Specifiers ######`
+docopt == 0.6.1             # Version Matching. Must be version 0.6.1
+keyring >= 4.1.1            # Minimum version 4.1.1
+coverage != 3.5             # Version Exclusion. Anything except version 3.5
+Mopidy-Dirble ~= 1.1        # Compatible release. Same as >= 1.1, == 1.*
+
+###### Create the requirements automatically (based on the packages installed in that environment) ######
+ pip freeze > requirements.txt
